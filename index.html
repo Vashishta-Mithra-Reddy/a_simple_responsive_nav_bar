@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link rel="icon" href="Daksha_favi.png" type="image/png">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-ul">
+                <li class="nav-icon"><span id="nav-icon" class="material-symbols-rounded" onclick="opensidebar()">menu</span></li>
+				<li class="nav-li">
+                    <div class="imgcontain">
+                        <img onclick="imgredir()" src="Daksha_favi.png" alt="Daksha Logo">
+                    </div>
+                </li>
+                <li class="nav-li"><a href="index.html">Home</a></li>
+                <li class="nav-li"><a href="events.html">Events</a></li>
+                <li class="nav-li"><a href="transport.html">Transport</a></li>
+                <li class="nav-li"><a href="team.html">Team</a></li>
+                <li class="nav-li"><a href="contact.html">Contact</a></li>
+                <li class="nav-li"><a href="about.html">About</a></li>
+                <li class="nav-li"><a href="login.html">Login</a></li>
+				
+                
+            </ul>
+        </nav>
+        <aside>
+            <ul class="sidebar-ul">
+			    <!-- <li class="sidebar-icon"><span class="material-symbols-rounded" onclick="collapsesidebar()">close</span></li> -->
+                
+                <li class="sidebar-li"><a href="index.html">Home</a></li>
+                <li class="sidebar-li"><a href="events.html">Events</a></li>
+                <li class="sidebar-li"><a href="transport.html">Transport</a></li>
+                <li class="sidebar-li"><a href="team.html">Team</a></li>
+                <li class="sidebar-li"><a href="contact.html">Contact</a></li>
+                <li class="sidebar-li"><a href="about.html">About</a></li>
+                <li class="sidebar-li"><a href="login.html">Login</a></li>
+            </ul>
+        </aside>
+    </header>
+	<main>
+	<img src="Daksha_favi.png">
+	</main>
+
+    <footer>
+        <!-- Your footer content goes here -->
+    </footer>
+
+    <script>
+    function opensidebar() {
+    var sidebarElements = document.getElementsByClassName("sidebar-ul");
+    var icon = document.getElementById("nav-icon");
+    if (sidebarElements.length > 0) {
+        var sidebar = sidebarElements[0];
+		if(sidebar.style.display == "flex")
+		{
+		sidebar.style.display = "none";
+        icon.innerHTML="menu";
+		}
+		else{
+		sidebar.style.display = "flex";
+        icon.innerHTML="close";
+
+		}
+        
+    } else {
+        console.error("Sidebar element not found");
+    }
+    }
+
+	
+	function imgredir() {
+	  window.location.href="index.html";
+	}
+	
+	window.addEventListener('resize', function() {
+    var sidebarElements = document.getElementsByClassName("sidebar-ul");
+
+    if (sidebarElements.length > 0) {
+        var sidebar = sidebarElements[0];
+
+        if (window.innerWidth > 945) {
+            sidebar.style.display = "none";
+        }
+    }
+    });
+
+
+    </script>
+    
+</body>
+</html>
