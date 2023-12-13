@@ -107,11 +107,13 @@ html {
 .nav-icon {
     padding: 20px;
     display: none;
-	position: absolute;
-	left: 10px;
+    position: absolute;
+    left: 10px;
+    user-select: none;
 }
 .sidebar-icon {
     padding: 20px;
+    user-select: none;
 }
 .material-symbols-rounded:hover{
     cursor: pointer;
